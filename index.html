@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Gem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .font-inter {
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="font-inter">
+    <header></header>
+    <!-- main content container  -->
+    <main class="m-4">
+      <!-- shape card container -->
+      <div class="flex flex-col md:flex-row">
+        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Triangle Card -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img
+                src="images/triangle.png"
+                alt="Triangle"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="font-bold text-2xl">Triangle</h2>
+              <p class="font-normal text-3xl">Area (A) = 0 5 X b X h</p>
+              <div>
+                <input
+                  id="triangle-base"
+                  class="w-24 text-2xl p-1 rounded-sm"
+                  type="text"
+                  placeholder="b"
+                />
+                <span>cm</span>
+                <input
+                  id="triangle-hight"
+                  class="w-24 text-2xl p-1 rounded-sm"
+                  type="text"
+                  placeholder=" h"
+                />
+                <span>cm</span>
+              </div>
+              <div>
+                <p class="text-2xl">
+                  Area: <span id="triangle-area"></span> <span>cm</span
+                  ><sup>3</sup>
+                </p>
+              </div>
+              <div class="card-actions">
+                <button
+                  onclick="calculateTriangleArea()"
+                  class="btn btn-primary w-full"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Rectangle -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-20">
+              <img
+                src="images/rectangle.png"
+                alt="Rectangle"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="font-bold text-2xl">Rectangle</h2>
+              <p class="font-normal text-3xl">Area (A) = w X I</p>
+              <div>
+                <input
+                  id="rectangle-width"
+                  class="w-24 text-2xl p-1 rounded-sm"
+                  type="text"
+                  placeholder="w"
+                />
+                <span>cm</span>
+                <input
+                  id="rectangle-hight"
+                  class="w-24 text-2xl p-1 rounded-sm"
+                  type="text"
+                  placeholder="l"
+                />
+                <span>cm</span>
+                <div>
+                  <p class="text-2xl">
+                    Area: <span id="rectangle-area"></span> <span>cm</span
+                    ><sup>2</sup>
+                  </p>
+                </div>
+              </div>
+              <div class="card-actions">
+                <button onclick="calculateRectangleArea()" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <!-- Parallelogram -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-24">
+              <img
+                src="images/parallelogram.png"
+                alt="Parallelogram"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="font-bold text-2xl">Parallelogram</h2>
+              <p class="font-normal">Area (A) = b X h</p>
+              <div class="card-actions">
+                <button class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <!-- Rhombus -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="images/rhombus.png" alt="Rhombus" class="rounded-xl" />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="font-bold text-2xl">Rhombus</h2>
+              <p class="font-normal">
+                If a dog chews shoes whose shoes does he choose?
+              </p>
+              <div class="card-actions">
+                <button class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- area calculation container -->
+        <div class="w-96 border-2 border-gray-700 rounded-md">
+          <h3 class="text-3xl">Area calculation</h3>
+        </div>
+      </div>
+    </main>
+    <script src="script/area-calculate.js"></script>
+  </body>
+</html>
